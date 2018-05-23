@@ -24,6 +24,9 @@ git fetch origin refs/replace/*:refs/replace/*
 make -f Makefile.cvs
 ./configure
 make
+echo 'export SUMO_HOME="$HOME/sumo"' >> ~/.bashrc
+echo 'export PATH="$HOME/sumo/bin:$PATH"' >> ~/.bashrc
+echo 'export PYTHONPATH="$HOME/sumo/tools:$PYTHONPATH"' >> ~/.bashrc
 sumo/bin/sumo --version
 ```
 
@@ -32,10 +35,8 @@ sumo/bin/sumo --version
 cd ~
 git clone https://github.com/cathywu/rllab-multiagent.git
 cd rllab-multiagent
-git clone https://github.com/berkeleyflow/flow.git
 python setup.py develop
-cd flow
-python setup.py develop
+echo 'export PYTHONPATH="$HOME/rllab-multiagent:$PYTHONPATH"' >> ~/.bashrc 
 ```
 
 ## flow
@@ -44,6 +45,7 @@ cd ~/rllab-multiagent
 git clone https://github.com/berkeleyflow/flow.git
 cd flow
 python setup.py develop
+echo 'export PYTHONPATH="$HOME/rllab-multiagent/flow:$PYTHONPATH"' >> ~/.bashrc 
 ```
 
 ## ray
