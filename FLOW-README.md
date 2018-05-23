@@ -13,7 +13,7 @@ sudo pip3 install cmake cython
 cd ~
 wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 sh ./Anaconda3-5.1.0-Linux-x86_64.sh
-conda env create -f environment.yml # If failed, remove the flow env and retry.
+conda env create -f environment.yml
 ```
 
 ## sumo
@@ -29,7 +29,7 @@ echo 'export SUMO_HOME="$HOME/sumo"' >> ~/.bashrc
 echo 'export PATH="$HOME/sumo/bin:$PATH"' >> ~/.bashrc
 echo 'export PYTHONPATH="$HOME/sumo/tools:$PYTHONPATH"' >> ~/.bashrc
 source ~/.bashrc
-sumo/bin/sumo --version # To test if installation is successful.
+sumo/bin/sumo --version # Test
 ```
 
 ## rllab-multiagent
@@ -40,7 +40,7 @@ cd rllab-multiagent
 python3 setup.py develop
 echo 'export PYTHONPATH="$HOME/rllab-multiagent:$PYTHONPATH"' >> ~/.bashrc 
 source ~/.bashrc
-# Missing testing method.
+#TODO Add Test method.
 ```
 
 ## flow
@@ -53,7 +53,7 @@ echo 'export PYTHONPATH="$HOME/rllab-multiagent/flow:$PYTHONPATH"' >> ~/.bashrc
 source ~/.bashrc
 cd examples/sumo
 source activate flow
-python3 sugiyama.py # To test if installation is successful.
+python3 sugiyama.py # Test
 source deactivate
 ```
 
@@ -64,5 +64,5 @@ git clone https://github.com/eugenevinitsky/ray.git
 cd ray/python
 sudo python3 setup.py develop
 cd ~/rllab-multiagent/flow/examples/rllib/
-python3 figure_eight.py # To test if installation is successful.
+python3 figure_eight.py # Test
 ```
