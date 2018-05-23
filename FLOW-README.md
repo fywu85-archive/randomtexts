@@ -28,7 +28,8 @@ make
 echo 'export SUMO_HOME="$HOME/sumo"' >> ~/.bashrc
 echo 'export PATH="$HOME/sumo/bin:$PATH"' >> ~/.bashrc
 echo 'export PYTHONPATH="$HOME/sumo/tools:$PYTHONPATH"' >> ~/.bashrc
-sumo/bin/sumo --version
+source ~/.bashrc
+sumo/bin/sumo --version # To test if installation is successful.
 ```
 
 ## rllab-multiagent
@@ -38,6 +39,8 @@ git clone https://github.com/cathywu/rllab-multiagent.git
 cd rllab-multiagent
 python3 setup.py develop
 echo 'export PYTHONPATH="$HOME/rllab-multiagent:$PYTHONPATH"' >> ~/.bashrc 
+source ~/.bashrc
+# Missing testing method.
 ```
 
 ## flow
@@ -46,7 +49,12 @@ cd ~/rllab-multiagent
 git clone https://github.com/berkeleyflow/flow.git
 cd flow
 python3 setup.py develop
-echo 'export PYTHONPATH="$HOME/rllab-multiagent/flow:$PYTHONPATH"' >> ~/.bashrc 
+echo 'export PYTHONPATH="$HOME/rllab-multiagent/flow:$PYTHONPATH"' >> ~/.bashrc
+source ~/.bashrc
+cd examples/sumo
+source activate flow
+python3 sugiyama.py # To test if installation is successful.
+source deactivate
 ```
 
 ## ray
@@ -55,4 +63,6 @@ cd ~
 git clone https://github.com/eugenevinitsky/ray.git
 cd ray/python
 sudo python3 setup.py develop
+cd ~/rllab-multiagent/flow/examples/rllib/
+python3 figure_eight.py # To test if installation is successful.
 ```
