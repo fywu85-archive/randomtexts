@@ -9,7 +9,6 @@ sudo pip3 install cmake cython
 cd ~
 wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 sh ./Anaconda3-5.1.0-Linux-x86_64.sh
-conda env create -f environment.yml
 ```
 
 ## sumo
@@ -33,6 +32,7 @@ sumo/bin/sumo --version # Test
 cd ~
 git clone https://github.com/cathywu/rllab-multiagent.git
 cd rllab-multiagent
+conda env create -f environment.yml
 python3 setup.py develop
 echo 'export PYTHONPATH="$HOME/rllab-multiagent:$PYTHONPATH"' >> ~/.bashrc 
 source ~/.bashrc
