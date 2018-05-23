@@ -49,3 +49,9 @@ echo 'export PYTHONPATH="$HOME/rllab-multiagent/flow:$PYTHONPATH"' >> ~/.bashrc
 ```
 
 ## ray
+```shell
+cd ~
+git clone https://github.com/eugenevinitsky/ray.git
+cd ray/python
+sudo python setup.py develop # This does not work yet.
+```
