@@ -12,7 +12,7 @@ sudo apt install cmake swig libgtest-dev python-pygame python-scipy autoconf lib
 cd ~
 wget https://repo.anaconda.com/archive/Anaconda2-5.1.0-Linux-x86_64.sh
 sh ./Anaconda2-5.1.0-Linux-x86_64.sh
-conda env create -f environment.yml
+conda env create -f environment.yml # If failed, remove the flow env and retry.
 ```
 
 ## sumo
