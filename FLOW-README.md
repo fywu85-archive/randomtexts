@@ -5,14 +5,14 @@ This is the installation guide to install FLOW on Ubuntu 16.04. The full FLOW en
 ```shell
 sudo apt update && sudo apt upgrade
 sudo apt install cmake swig libgtest-dev python-pygame python-scipy autoconf libtool pkg-config libgdal-dev libxerces-c-dev libproj-dev libfox-1.6-dev libxml2-dev libxslt1-dev build-essential curl unzip flex bison python python-dev python3-dev
-sudo pip2 install cmake cython
+sudo pip3 install cmake cython
 ```
 
 ## Anaconda
 ```shell
 cd ~
-wget https://repo.anaconda.com/archive/Anaconda2-5.1.0-Linux-x86_64.sh
-sh ./Anaconda2-5.1.0-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
+sh ./Anaconda3-5.1.0-Linux-x86_64.sh
 conda env create -f environment.yml # If failed, remove the flow env and retry.
 ```
 
@@ -36,7 +36,7 @@ sumo/bin/sumo --version
 cd ~
 git clone https://github.com/cathywu/rllab-multiagent.git
 cd rllab-multiagent
-python setup.py develop
+python3 setup.py develop
 echo 'export PYTHONPATH="$HOME/rllab-multiagent:$PYTHONPATH"' >> ~/.bashrc 
 ```
 
@@ -45,7 +45,7 @@ echo 'export PYTHONPATH="$HOME/rllab-multiagent:$PYTHONPATH"' >> ~/.bashrc
 cd ~/rllab-multiagent
 git clone https://github.com/berkeleyflow/flow.git
 cd flow
-python setup.py develop
+python3 setup.py develop
 echo 'export PYTHONPATH="$HOME/rllab-multiagent/flow:$PYTHONPATH"' >> ~/.bashrc 
 ```
 
@@ -54,5 +54,5 @@ echo 'export PYTHONPATH="$HOME/rllab-multiagent/flow:$PYTHONPATH"' >> ~/.bashrc
 cd ~
 git clone https://github.com/eugenevinitsky/ray.git
 cd ray/python
-sudo python setup.py develop
+sudo python3 setup.py develop
 ```
