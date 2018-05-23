@@ -1,5 +1,5 @@
 # Installation
-This is the installation guide to install FLOW on Ubuntu 16.04. The full FLOW environment requires `sumo`, `rllab-multiagent`, `flow`, and `ray`.
+This is the installation guide to install FLOW on Ubuntu 16.04. The full FLOW environment requires `sumo`, `rllab-multiagent`, `flow`, and `ray`. Hence, the installation is split into four steps as detailed below.
 
 ## Dependencies
 ```shell
@@ -45,7 +45,7 @@ source ~/.bashrc
 
 ## flow
 ```shell
-cd ~/rllab-multiagent
+cd ~/rllab-multiagent # Repo flow needs to be installed within rllab-multiagent.
 git clone https://github.com/berkeleyflow/flow.git
 cd flow
 python3 setup.py develop
