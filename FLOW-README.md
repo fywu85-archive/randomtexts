@@ -40,7 +40,7 @@ cd rllab-multiagent
 python3 setup.py develop
 echo 'export PYTHONPATH="$HOME/rllab-multiagent:$PYTHONPATH"' >> ~/.bashrc 
 source ~/.bashrc
-#TODO Add Test method.
+#TODO: add Test method.
 ```
 
 ## flow
