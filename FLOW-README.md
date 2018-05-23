@@ -1,15 +1,11 @@
 # Installation
-This is the installation guide to install FLOW on Ubuntu 16.04. The full FLOW environment requires `sumo`, `rllab-multiagent`, `flow`, and `ray`. Hence, the installation is split into four steps as detailed below.
+This is the installation guide to install FLOW on Ubuntu 16.04. The full FLOW environment requires `sumo`, `rllab-multiagent`, `flow`, and `ray`. Hence, the installation of the four libraries is detailed as follows.
 
 ## Dependencies
 ```shell
 sudo apt update && sudo apt upgrade
 sudo apt install cmake swig libgtest-dev python-pygame python-scipy autoconf libtool pkg-config libgdal-dev libxerces-c-dev libproj-dev libfox-1.6-dev libxml2-dev libxslt1-dev build-essential curl unzip flex bison python python-dev python3-dev
 sudo pip3 install cmake cython
-```
-
-## Anaconda
-```shell
 cd ~
 wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 sh ./Anaconda3-5.1.0-Linux-x86_64.sh
